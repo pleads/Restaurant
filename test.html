@@ -1,155 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Today's Specials</title>
   <style>
+    /* Base styles */
     * {
       box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
     body {
-      margin: 0;
-      padding: 40px;
-      background: #007bff;
-      font-family: sans-serif;
+      background-color: #1f1f1f;
+      color: white;
+      font-family: Arial, sans-serif;
+      padding: 20px;
     }
 
-    .carousel-wrapper {
-      position: relative;
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
     }
 
-    .carousel-container {
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
+    .card-container {
       display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       gap: 20px;
-      padding-bottom: 20px;
-      scroll-behavior: smooth;
     }
 
     .card {
-      flex: 0 0 auto;
-      scroll-snap-align: center;
-      width: 250px;
-      background: white;
-      border-radius: 10px;
-      border: 2px solid black;
-      padding: 10px;
-      text-align: center;
-      transition: filter 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
-      filter: blur(3px);
-      opacity: 0.5;
+      background-color: #2a2a2a;
+      border: 1px solid #333;
+      border-radius: 8px;
+      overflow: hidden;
+      width: 100%;
+      max-width: 300px;
+      position: relative;
+      transition: transform 0.3s ease;
     }
 
-    .card.active {
-      filter: none;
-      opacity: 1;
-      transform: scale(1.05);
-      z-index: 1;
+    .card:hover {
+      transform: scale(1.02);
     }
 
     .card img {
       width: 100%;
-      border-radius: 8px;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .badge-new {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background-color: red;
+      color: white;
+      padding: 5px 10px;
+      font-size: 0.75rem;
+      border-radius: 20px;
+    }
+
+    .card-body {
+      padding: 15px;
+      text-align: center;
+    }
+
+    .strike {
+      text-decoration: line-through;
+      color: red;
+      margin-bottom: 5px;
     }
 
     .price {
-      text-decoration: line-through;
-      color: red;
-      font-weight: bold;
+      margin-bottom: 10px;
     }
 
-    .new-price {
-      font-size: 16px;
-      margin-top: 5px;
-    }
-
-    .btn {
+    .order-btn {
       background-color: yellow;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 20px;
-      margin-top: 10px;
+      color: blue;
       font-weight: bold;
-      color: #007bff;
-    }
-
-    .arrow {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: white;
       border: none;
-      font-size: 24px;
       padding: 10px;
-      border-radius: 50%;
+      width: 100%;
       cursor: pointer;
-      z-index: 10;
+      border-radius: 5px;
+      font-size: 1rem;
     }
 
-    .arrow-left {
-      left: -10px;
+    /* Responsive layout with media queries */
+    @media (min-width: 480px) {
+      .card {
+        flex: 1 1 calc(50% - 40px);
+      }
     }
 
-    .arrow-right {
-      right: -10px;
+    @media (min-width: 768px) {
+      .card {
+        flex: 1 1 calc(33.33% - 40px);
+      }
     }
 
-    @media (max-width: 768px) {
-      .arrow {
-        font-size: 18px;
-        padding: 8px;
+    @media (min-width: 1024px) {
+      .card {
+        flex: 1 1 calc(25% - 40px);
+      }
+    }
+
+    @media (min-width: 1400px) {
+      .card {
+        flex: 1 1 calc(20% - 40px);
       }
     }
   </style>
 </head>
 <body>
 
-<div class="carousel-wrapper">
-  <button class="arrow arrow-left" onclick="scrollCarousel(-1)">←</button>
-  <div class="carousel-container" id="carousel">
-    <div class="card"><img src="https://via.placeholder.com/250x150"><p class="price">₦3000</p><p class="new-price">now @ ₦2800</p><button class="btn">Order Now</button></div>
-    <div class="card"><img src="https://via.placeholder.com/250x150"><p class="price">₦3000</p><p class="new-price">now @ ₦2800</p><button class="btn">Order Now</button></div>
-    <div class="card"><img src="https://via.placeholder.com/250x150"><p class="price">₦3000</p><p class="new-price">now @ ₦2800</p><button class="btn">Order Now</button></div>
-    <div class="card"><img src="https://via.placeholder.com/250x150"><p class="price">₦3000</p><p class="new-price">now @ ₦2800</p><button class="btn">Order Now</button></div>
-    <div class="card"><img src="https://via.placeholder.com/250x150"><p class="price">₦3000</p><p class="new-price">now @ ₦2800</p><button class="btn">Order Now</button></div>
+  <h2>Today's Specials</h2>
+
+  <div class="card-container">
+
+    <!-- Card 1 -->
+    <div class="card">
+      <img src="https://i.imgur.com/O4I3gQ2.jpg" alt="Pizza">
+      <div class="card-body">
+        <p class="strike">₦3000</p>
+        <p class="price">now @ ₦2800</p>
+        <button class="order-btn">Order Now</button>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card">
+      <span class="badge-new">New</span>
+      <img src="https://i.imgur.com/UcK6i6f.jpg" alt="Meat">
+      <div class="card-body">
+        <p class="strike">₦3000</p>
+        <p class="price">now @ ₦2800</p>
+        <button class="order-btn">Order Now</button>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card">
+      <span class="badge-new">New</span>
+      <img src="https://i.imgur.com/9Mz8zWn.jpg" alt="Jollof Rice">
+      <div class="card-body">
+        <p class="strike">₦3000</p>
+        <p class="price">now @ ₦2800</p>
+        <button class="order-btn">Order Now</button>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="card">
+      <img src="https://i.imgur.com/vHgupSV.jpg" alt="Pasta">
+      <div class="card-body">
+        <p class="strike">₦3000</p>
+        <p class="price">now @ ₦2800</p>
+        <button class="order-btn">Order Now</button>
+      </div>
+    </div>
+
   </div>
-  <button class="arrow arrow-right" onclick="scrollCarousel(1)">→</button>
-</div>
-
-<script>
-  const container = document.getElementById('carousel');
-  const cards = container.querySelectorAll('.card');
-
-  function updateActiveCard() {
-    let center = container.scrollLeft + container.offsetWidth / 2;
-    let closest = null;
-    let closestDist = Infinity;
-
-    cards.forEach(card => {
-      const cardCenter = card.offsetLeft + card.offsetWidth / 2;
-      const dist = Math.abs(center - cardCenter);
-      if (dist < closestDist) {
-        closestDist = dist;
-        closest = card;
-      }
-    });
-
-    cards.forEach(card => card.classList.remove('active'));
-    if (closest) closest.classList.add('active');
-  }
-
-  container.addEventListener('scroll', () => requestAnimationFrame(updateActiveCard));
-  window.addEventListener('load', updateActiveCard);
-
-  function scrollCarousel(direction) {
-    const cardWidth = cards[0].offsetWidth + 20; // include margin
-    container.scrollBy({ left: direction * cardWidth, behavior: 'smooth' });
-  }
-
-  // Auto-scroll every 4 seconds
-  setInterval(() => scrollCarousel(1), 4000);
-</script>
 
 </body>
 </html>

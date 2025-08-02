@@ -61,12 +61,12 @@ form input{
     width: 50%;
     border: none ;
 }
-.container-fluid{
+/* .container-fluid{
     top: 10px;
     position: relative;
  
  
-}
+} */
 .burger{
     position: relative;
     width: 40%;
@@ -564,4 +564,542 @@ footer{
 }
 .fa fa-facebook{
     border: 1px solid red;
+}
+
+@media screen and (max-width:768px) {
+    .burger{
+        background: #000;
+        position: relative;
+        width: 30%;
+        top: 20px;
+        left: 5px;
+        padding: 20px;
+        /* background: orange; */
+        border-radius: 3px 5px 244px 0px;
+    }
+    .burger img{
+     width: 200px;
+    position: relative;
+   
+    z-index: 10;
+    left: 10px;
+    }
+    .content{
+        position: relative;
+        top: 20px;
+        gap: 40px;
+        display: flex;
+        /* padding: 10px; */
+        /* margin: 0  auto; */
+        justify-content:center
+
+    }
+    .special{
+       position: relative;
+       display: block;
+       background: rebeccapurple;
+ 
+    
+    }
+    .special-slide{
+        position: relative;
+        display: block;
+        padding: 10px;
+        margin: 0 auto;
+        top: 20px;
+        justify-content: center;
+    
+    }
+    .slide1{
+        position: relative;
+        display: flex;
+        border: 1px solid black;
+        padding: 10px;
+        gap: 10;
+        margin: 10px;
+        height: 34vh;
+        text-align: center;
+        color: #fff;
+        left: 30px;
+        top: -10px;
+        width: 250px;
+    }
+    .slide1 img{
+        position: relative;
+        display: flex;
+        width: 350px;
+        border-radius: 5px;
+        height: 200px;
+    
+    }
+    .not{
+        position: relative;
+        text-decoration: line-through;
+        color: red;
+        font-style: italic;
+    }
+    .special-label{
+        background: #ff6b6b;
+        color: white;
+        border-color: #ff6b6b;
+        top: 10px;
+        padding: 0 10 10px;
+    }
+    .special-slide a{
+        position: relative;
+        display: flex;
+        text-decoration: none;
+        background: rgb(96, 0, 125);
+        border-radius: 10px;
+        text-align: center;
+        left: 20px;
+        justify-content: center;
+        padding: 10px;
+        font-weight: bold;
+        width: 150px;
+        height: 100px;
+        margin: 0 auto;
+    }
+    .slide2{
+        position: relative;
+        display: flex;
+        border: 1px solid black;
+        padding: 10px;
+        gap: 10;
+        margin: 10px;
+        height: 34vh;
+        text-align: center;
+        color: #fff;
+        left: 20px;
+ 
+        width: 250px;
+    }
+    .slide2 img{
+        position: relative;
+        display: flex;
+        width: 350px;
+        border-radius: 5px;
+        height: 200px;
+    
+    }
+    .slide3{
+        position: relative;
+        display: flex;
+        border: 1px solid black;
+        padding: 10px;
+        gap: 10;
+        margin: 10px;
+        height: 34vh;
+        text-align: center;
+        color: #fff;
+        left: 30px;
+      
+        width: 250px;
+    }
+    .slide3 img{
+        position: relative;
+        display: flex;
+        width: 200px;
+        border-radius: 5px;
+        height: 150px;
+    
+    }
+    .slide4{
+        position: relative;
+        display: flex;
+        border: 1px solid black;
+        padding: 10px;
+        gap: 10;
+        margin: 10px;
+        height: 34vh;
+        text-align: center;
+        color: #fff;
+        left: 30px;
+        top: -10px;
+        width: 250px;
+    }
+    .slide4 img{
+        position: relative;
+        display: flex;
+        width: 350px;
+        border-radius: 5px;
+        height: 200px;
+    
+    }
+    .special-slide label{
+        left: 10px;
+        position: relative;
+        top: 10px;
+    }
+    .about-restuarant img{
+        display: block;
+        height: 30vh;
+        float: left; 
+        margin: 0 20px 20px 0;
+        width: 250px;
+        border-radius: 16px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    }
+    .about-chef{
+        position: relative;
+        top: -10px;
+    }
+    .about-chef h1{
+        position: relative;
+        top: -20px;
+    }
+    .about-chef img{
+        float: left;
+        position: relative;
+        height: 30vh;
+          margin: 0 20px 20px 0;
+          width: 300px;
+          border-radius: 16px;
+          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+          top: -50px;
+    }
+    .about-chef p{
+
+        width: 300px;
+    }
+    .about p{
+        font-size: 12px;
+        color: #fff;
+        text-align: justify;
+    }
+    .most-order{
+        position: relative;
+        display: block;
+        width: 80%;
+        background: orange;
+        margin: 0 auto;
+        padding: 10px;
+        text-align: center;
+        justify-content: center;
+    }
+    .most-order img{
+            position: relative;
+            display: flex;
+            width: 250px;
+            border-radius: 5px;
+            height: 200px;
+            margin: 0 auto;
+        
+        }
+    
+    
+    .order-slide {
+        position: relative;
+        display: block;
+        padding: 10px;
+        margin: 0 auto;
+        
+        justify-content: space-between;
+    
+    }
+    .order1, .order2, .order3, .order4{
+        position: relative;
+        display: block;
+        height: 40vh;
+        width: 50%;
+        border: none;
+        margin: 0 auto;
+        align-items: center;
+        text-align: center;
+     
+    } 
+    .order-slide label{
+        position: relative;
+        top: 10px;
+        text-transform: capitalize;
+    }
+    .order-slide a{
+        background: #000;
+        color: #fff;
+        padding: 10px;
+        text-decoration: none;
+        border-radius: 10px;
+        text-align: center;
+        justify-content: center;
+        padding: 10px;
+        font-weight: bold;
+        width: 150px;
+        margin: 0 auto;
+        top: 10px;
+        left: 20px;
+        position: relative;
+    }
+    .days{
+        height: 46vh;
+    }
+    .book{
+        
+        float: right;
+        top: -100px;
+        background: orange;
+        color: #000;
+        right: 30px;
+        width: 200px;
+    }
+    .book a{
+        color: #000;
+    }
+    .special-friday{
+        top: 40px;
+    }
+}
+@media screen and ( max-width:425px) {
+    .container{
+        width: 400px;
+        background: red;
+  
+    }
+    .special{
+        width:400px;
+    }
+    .about{
+        width: 400px;
+        display: block;
+    }
+    .about-restuarant{
+        display:block;
+        text-align: center;
+    }
+        .about-restuarant h1{
+            font-size: 16px;
+            color: #000;
+        }
+    .about-chef{
+        display: block;
+        top: 50px;
+    }
+    .about-chef h1{
+        top: -50px;
+    }
+    .about-chef p{
+        top: -50px;
+        position: relative;
+    }
+    .most-order{
+        width: 400px;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .most-order img{
+        width: 200px;
+        top: 20px;
+    }
+    .most-order a{
+        top: 5px;
+    }
+    .reservation-book{
+        width: 400px;
+        top: 10px;
+    }
+    .special-friday{
+        left: 10px;
+        width: 200px;
+        font-size: 13px;
+        top: 20px;
+    }
+    .book{
+        left: 8px;
+        width: 170px;
+        color: red;
+        background: blue;
+    }
+}
+@media screen and (max-width:1024px) {
+    .burger{
+  
+        position: relative;
+        width: 30%;
+
+        left: 5px;
+
+        /* background: orange; */
+        border-radius: 3px 5px 244px 0px;
+    }
+    .burger img{
+     width: 400px;
+    position: relative;
+   
+    z-index: 10;
+    left: 10px;
+    }
+   
+    
+    .special-slide{
+
+        position: relative;
+        display: block;
+        padding: 10px;
+        margin: 0 auto;
+        top: 20px;
+        justify-content: center;
+    
+    }
+    .special-slide img{
+        display: block;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    .special-label{
+        background: #ff6b6b;
+        color: white;
+        border-color: #ff6b6b;
+
+        padding: 0 10 10px;
+    }
+    .special-slide a{
+        position: relative;
+        display: flex;
+        text-decoration: none;
+        background: rgb(96, 0, 125);
+        border-radius: 10px;
+        text-align: center;
+        left: 25px;
+        justify-content: center;
+        padding: 10px;
+        font-weight: bold;
+        width: 150px;
+        height: 100px;
+        margin: 0 auto;
+    }
+    .slide1{
+        position: relative;
+        display: flex;
+        border: 1px solid black;
+        padding: 10px;
+        gap: 10;
+        margin: 10px;
+        height: 34vh;
+        text-align: center;
+        color: #fff;
+        /* left: 30px; */
+        top: -10px;
+        width: 360px;
+    }
+    .slide1 img{
+        position: relative;
+        display: flex;
+        width: 350px;
+        border-radius: 5px;
+        height: 260px;
+
+    }
+    .slide2{
+        position: relative;
+        display: flex;
+        border: 1px solid black;
+        padding: 10px;
+        gap: 10;
+        margin: 10px;
+        height: 34vh;
+        text-align: center;
+        color: #fff;
+        /* left: 20px; */
+        top: -10px;
+        width: 360px;
+    }
+    .slide2 img{
+        position: relative;
+        display: flex;
+        width: 350px;
+        border-radius: 5px;
+        height: 260px;
+    
+    }
+    .slide3{
+        position: relative;
+        display: flex;
+        border: 1px solid black;
+        padding: 10px;
+        gap: 10;
+        margin: 10px;
+        height: 34vh;
+        text-align: center;
+        color: #fff;
+        left: 30px;
+        top: -10px;
+        width: 350px;
+    }
+    .slide3 img{
+        position: relative;
+        display:flex;
+        width: 300px;
+        border-radius: 5px;
+        height: 260px;
+    
+    }
+     .slide4{
+        position: relative;
+        display: flex;
+        border: 1px solid black;
+        padding: 10px;
+        gap: 10;
+        margin: 10px;
+        height: 34vh;
+        text-align: center;
+        color: #fff;
+        left: 30px;
+        top: -10px;
+        width: 360px;
+    }
+    .slide4 img{
+        position: relative;
+        display: flex;
+        width: 350px;
+        border-radius: 5px;
+        height: 200px;
+    
+    }
+    .order-slide{
+        display: block;
+        margin: 0 auto;
+        position: relative;
+        justify-content: center;
+    }
+     .order1, .order2, .order3, .order4{
+        position: relative;
+        display: block;
+        height: 40vh;
+        width: 50%;
+        border: none;
+        margin: 0 auto;
+        align-items: center;
+        text-align: center;
+     
+    } 
+    .order-slide label{
+        position: relative;
+        top: 10px;
+        text-transform: capitalize;
+    }
+    .order-slide a{
+        background: #000;
+        color: #fff;
+        padding: 10px;
+        text-decoration: none;
+        border-radius: 10px;
+        text-align: center;
+        justify-content: center;
+        padding: 10px;
+        font-weight: bold;
+        width: 150px;
+        margin: 0 auto;
+        top: 10px;
+        left: 20px;
+        position: relative;
+    }
+    .special-friday{
+        top: 10px;
+    }
+    .book{
+        left: 8px;
+        width: 170px;
+        color: red;
+        background: orange;
+    }
 }
